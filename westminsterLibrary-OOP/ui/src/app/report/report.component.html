@@ -1,0 +1,40 @@
+<div class="formContainer">
+  <div>
+    Today's Date:
+    Year: <input type="text" class="shorttxt" name="todayYear"  [(ngModel)]="year" placeholder="YYYY" >
+    Month:<input type="text" class="shorttxt" name="todaywMonth"  [(ngModel)]="month" placeholder="MM" >
+    Day:<input type="text" class="shorttxt" name="todayDay" [(ngModel)]="day" placeholder="DD" ><br><br>
+    Today's Time:
+    Hour:<input type="text" class="shorttxt" name="todayHour" [(ngModel)]="hour" placeholder="HH" >
+    Minute:<input type="text" class="shorttxt" name="todayMin" [(ngModel)]="minute" placeholder="MM" >
+    <br><br>
+    <input type="submit" value="GENERATE" id="btnReport" (click)="generateReportAction()">
+  </div>
+  <hr>
+  <div>
+  <table>
+    <thead>
+    <tr>
+      <th>Isbn</th>
+      <th>Type</th>
+      <th>Title</th>
+      <th>Sector</th>
+      <th>ReaderID</th>
+      <th>Overdue</th>
+      <th>Corresponding fee</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of reportDetails">
+      <td>{{item.isbn}}</td>
+      <td>{{item.currentReader.readerName}}</td>
+      <td>{{item.title}}</td>
+      <td>{{item.sector}}</td>
+      <td>{{item.currentReader.readerID}}</td>
+      <td>{{item.currentReader.mobileNumber}}</td>
+      <td>{{item.publicationDate}}</td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+</div>

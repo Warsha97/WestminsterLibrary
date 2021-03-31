@@ -1,0 +1,126 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,700');
+
+body {
+    background:rgb(114, 144, 163);
+    background-image: url("assets/lielahti-2.jpg");
+     background-repeat:   no-repeat;
+        background-position: center center;
+
+        background-size: cover;
+
+    padding: 3em;
+    font-family: 'Raleway', 'Arial';
+    color:rgb(83, 75, 75);
+}
+
+
+
+.footer {
+    background-color: #BDBDBD;
+    text-align: center;
+}
+
+.leftMenu {
+    height: 500px;
+    background-color: #D8D8D8;
+    width: 150px;
+}
+
+.mainContent {
+    height: 500px;
+    background-color: #E6E6E6;
+    width: 650px;
+}
+
+.newItemForm{
+    width:100%;
+    clear: both;
+}
+
+.header{
+    background-color: azure;
+    margin-left: 80px;
+    padding: 20px;
+    width:900px;
+    height:80px;
+    border-radius: 5px;
+    text-align: center;
+
+}
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    background-color: #333;
+    padding: 20px;
+    width: 900px;
+    margin-left: 80px;
+    border-radius: 5px;
+    //position: fixed;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: rgb(19, 4, 100);
+}
+
+
+
+.formContainer{
+   border-radius: 5px;
+   background-color: #c7bcbc;
+   padding: 20px;
+   width:900px;
+   margin-left: 80px;
+}
+
+.shorttext{
+   width: 20%;
+   padding: 12px 20px;
+       margin: 8px 0;
+       display: inline-block;
+       border: 1px solid #ccc;
+       border-radius: 4px;
+       box-sizing: border-box;
+}
+
+.txt, select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 140px;
+    background-color: rgb(236, 162, 51);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+input[type=submit] {
+    background-color: #e64b24;
+}

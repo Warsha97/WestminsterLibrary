@@ -1,0 +1,16 @@
+<div class="formContainer">
+  <h3>Register New Reader</h3>
+
+  Reader Name:
+  <input type="text" class="txt" name="readerName" [(ngModel)]="readerName"  placeholder="Enter Reader's name" required>
+  <br>
+  Contact Number:
+  <input type="text" class="txt" name="readerContact" [(ngModel)]="readerContact"  placeholder="Enter Reader contact number" required>
+  <br>
+  Email:
+  <input type="text" class="txt" name="readerEmail" [(ngModel)]="readerEmail"  placeholder="Enter Reader's Email" required>
+  <br>
+
+  <input type="submit" value="Register" id="btnSaveNewReader" (click)="saveNewReader()">
+  <h5>Status: {{newReaderStatus}}</h5>
+</div>

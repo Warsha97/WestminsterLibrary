@@ -1,0 +1,22 @@
+<div class="formContainer">
+  <h3>Delete A Book</h3>
+  ISBN:
+  <input type="text" class="txt"  [(ngModel)]="isbnSelectedBook" placeholder="Enter Book isbn">
+  <br>
+  <div>
+    <table>
+      <tr>{{isbn}}</tr>
+      <tr>{{title}}</tr>
+      <tr>{{sector}}</tr>
+      <tr>{{author}}</tr>
+      <tr>{{publisher}}</tr>
+    </table>
+  </div>
+  <input type="submit" value="Show This Book" id="btnShowBook" (click)="showBook()"><br>
+  <hr>
+  <input type="submit" value="Delete This Book" id="btnDeleteBook" (click)="deleteBook()">
+  <table>
+    <tr>{{status}}</tr>
+  <tr>{{availableSlots}}</tr>
+  </table>
+</div>

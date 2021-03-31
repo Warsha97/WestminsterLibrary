@@ -1,0 +1,44 @@
+<div class="formContainer">
+  <h3>Burrow A DVD</h3>
+  ISBN:
+  <input type="text" class="txt" id="isbnSelectedDVD" [(ngModel)]="isbnSelectedDVD" placeholder="Enter DVD isbn">
+  <br>
+  <input type="submit" value="Show This DVD" id="btnShowDVD" (click)="showDVD()">
+  <div class="DVDstatus">
+    <table>
+      <tr [ngClass]="{'positive' : availability === 'AVAILABLE!', 'negative' : availability !== 'AVAILABLE!'}">{{availability}}</tr>
+      <tr>{{willBeAvailable}}</tr>
+      <tr>{{currentUserId}}</tr>
+      <tr>{{currentUserName}}</tr>
+      <tr>{{currentUserNumber}}</tr>
+      <tr>{{currentUserEmail}}</tr>
+      <tr>{{isbn}}</tr>
+      <tr>{{title}}</tr>
+      <tr>{{sector}}</tr>
+    </table>
+  </div>
+  <hr>
+  Reader ID:
+  <input type="text" class="txt" name="readerId"  [(ngModel)]="txtReaderId" placeholder="Enter Reader ID" >
+  <br><br>
+  Burrowing Date:<br>
+  Year: <input type="text" class="shorttxt" name="burrowYear"  [(ngModel)]="year" placeholder="YYYY" >
+  Month:<input type="text" class="shorttxt" name="burrowMonth"  [(ngModel)]="month" placeholder="MM" >
+  Day:<input type="text" class="shorttxt" name="burrowDay" [(ngModel)]="day" placeholder="DD" ><br><br>
+  Burrowing Time:<br>
+  Hour:<input type="text" class="shorttxt" name="burrowHour" [(ngModel)]="hour" placeholder="HH" >
+  Time:<input type="text" class="shorttxt" name="burrowMin" [(ngModel)]="minute" placeholder="MM" >
+  <br><br>
+  <div>
+    <table>
+      <tr>{{burrowingStatus}}</tr>
+      <tr>{{newReaderId}}</tr>
+      <tr>{{newReaderName}}</tr>
+      <tr>{{newReaderNumber}}</tr>
+      <tr>{{newReaderEmail}}</tr>
+      <tr>{{dueDate}}</tr>
+    </table>
+    {{errorStatus}}
+  </div>
+  <input type="submit" value="Burrow This DVD" id="btnBurrowDVD" (click)="burrowDVD()">
+</div>

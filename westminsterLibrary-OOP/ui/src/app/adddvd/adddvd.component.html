@@ -1,0 +1,29 @@
+<div class="formContainer">
+  <h3>Add A New DVD</h3>
+  ISBN:
+  <input type="text" class="txt" name="isbnDVD" [(ngModel)]="isbn" placeholder="ISBN" required>
+  <br>
+  Title:
+  <input type="text" class="txt" name="titleDVD" [(ngModel)]="title" placeholder="Title" >
+  <br>
+  Sector:
+  <input type="text" class="txt" name="sectorDVD" [(ngModel)]="sector" placeholder="Sector"  >
+  <br>
+  Producer:
+  <input type="text" class="txt" name="producer" [(ngModel)]="producer" placeholder="Producer" >
+  <br>
+  Actor(s):
+  <input type="text" class="txt" name="actors" [(ngModel)]="actors" placeholder="Actor1,Actor2,.." >
+  <br>
+  Publication Date:
+  <input type="text" class="txt" name="pubdateDVD" [(ngModel)]="publicationDate" placeholder="dd/mm/yyyy">
+  <br>
+  Available language(s):
+  <input type="text" class="txt" name="languages" [(ngModel)]="languages" placeholder="Language1,Language2,.." >
+  <br>
+  Available subtitle(s):
+  <input type="text" class="txt" name="subtitles" [(ngModel)]="subtitles" placeholder="Subtitle1,Subtitle2,.." >
+  <br>
+  <input type="submit" id="btnSaveDVD" value="Add This DVD" (click)="saveNewDVD()">
+  <h5>Status: {{postRequestResponse}}</h5>
+</div>

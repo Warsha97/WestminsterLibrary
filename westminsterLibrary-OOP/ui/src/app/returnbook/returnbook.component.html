@@ -1,0 +1,35 @@
+<div class="formContainer">
+  <h3>Return A Book</h3>
+  ISBN:
+  <input type="text" class="txt" id="isbnSelectedBook" [(ngModel)]="isbnReturningBook" placeholder="Enter Book isbn">
+  <br>
+  <input type="submit" value="Show This Book" id="btnBurrowedDetails" (click)="showDetailsBeforeReturn()">
+  <div>
+    <table>
+      <tr><td>{{isbn}}</td></tr>
+      <tr><td>{{bookTitle}}</td></tr>
+      <tr><td>{{burrowDateTime}}</td></tr>
+      <tr><td>{{readerDetails}}</td></tr>
+      <tr><td>{{dueDateTime}}</td></tr>
+    </table>
+  </div>
+  <hr>
+  <div>
+    Returning Date:<br><br>
+    Year: <input type="text" class="shorttxt" name="burrowYear"  [(ngModel)]="year" placeholder="YYYY" >
+    Month:<input type="text" class="shorttxt" name="burrowMonth"  [(ngModel)]="month" placeholder="MM" >
+    Day:<input type="text" class="shorttxt" name="burrowDay" [(ngModel)]="day" placeholder="DD" ><br><br>
+    Returning Time:<br><br>
+    Hour:<input type="text" class="shorttxt" name="burrowHour" [(ngModel)]="hour" placeholder="HH" >
+    Minute:<input type="text" class="shorttxt" name="burrowMin" [(ngModel)]="minute" placeholder="MM" >
+    <br><br>
+    <input type="submit" value="Return" id="btnReturn" (click)="returnAction()">
+  </div>
+  <div>
+    <table>
+      <tr><td>{{duration}}</td></tr>
+      <tr><td>{{fine}}</td></tr>
+    </table>
+  </div>
+
+</div>

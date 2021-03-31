@@ -1,0 +1,44 @@
+<div class="formContainer">
+  <h3>Burrow A Book</h3>
+  ISBN:
+  <input type="text" class="txt" id="isbnSelectedBook" [(ngModel)]="isbnSelectedBook" placeholder="Enter Book isbn">
+  <br>
+  <div class="bookStatus">
+    <table>
+      <tr [ngClass]="{'positive' : availability === 'AVAILABLE!', 'negative' : availability !== 'AVAILABLE!'}">{{availability}}</tr>
+      <tr>{{willBeAvailable}}</tr>
+      <tr>{{currentUserId}}</tr>
+      <tr>{{currentUserName}}</tr>
+      <tr>{{currentUserNumber}}</tr>
+      <tr>{{currentUserEmail}}</tr>
+      <tr>{{isbn}}</tr>
+      <tr>{{title}}</tr>
+      <tr>{{sector}}</tr>
+    </table>
+  </div>
+  <input type="submit" value="Show This Book" id="btnShowBook" (click)="showBook()">
+  <hr>
+  Reader ID:
+  <input type="text" class="txt" name="readerId" id="readerId" [(ngModel)]="txtReaderId" placeholder="Enter Reader ID" >
+  <br><br>
+  Burrowing Date:<br>
+  Year: <input type="text" class="shorttxt" name="burrowYear"  [(ngModel)]="year" placeholder="YYYY" >
+  Month:<input type="text" class="shorttxt" name="burrowMonth"  [(ngModel)]="month" placeholder="MM" >
+  Day:<input type="text" class="shorttxt" name="burrowDay" [(ngModel)]="day" placeholder="DD" ><br><br>
+  Burrowing Time:<br>
+  Hour:<input type="text" class="shorttxt" name="burrowHour" [(ngModel)]="hour" placeholder="HH" >
+  Minute:<input type="text" class="shorttxt" name="burrowMin" [(ngModel)]="minute" placeholder="MM" >
+  <br><br>
+  <div>
+    <table>
+      <tr>{{burrowingStatus}}</tr>
+      <tr>{{newReaderId}}</tr>
+      <tr>{{newReaderName}}</tr>
+      <tr>{{newReaderNumber}}</tr>
+      <tr>{{newReaderEmail}}</tr>
+      <tr>{{dueDate}}</tr>
+    </table>
+    {{errorStatus}}
+  </div>
+  <input type="submit" value="Burrow This Book" id="btnBurrowBook" (click)="burrowBook()">
+</div>

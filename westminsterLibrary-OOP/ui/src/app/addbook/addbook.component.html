@@ -1,0 +1,28 @@
+<div class="formContainer">
+  <h3>Add A New Book</h3>
+  ISBN:
+  <input type="text" class="txt" name="isbnBook" [(ngModel)]="isbn"  placeholder="ISBN" required>
+  <br>
+  Title:
+  <input type="text" class="txt" name="titleBook" [(ngModel)]="title" placeholder="Title" >
+  <br>
+  Sector:
+  <input type="text" class="txt" name="sectorBook" [(ngModel)]="sector" placeholder="Sector" >
+  <br>
+  Author(s):
+  <input type="text" class="txt" name="author" [(ngModel)]="authors" placeholder="Author1,Author2,.."  >
+  <br>
+  Publisher:
+  <input type="text" class="txt" name="publisher" [(ngModel)]="publisher" placeholder="Publisher" >
+  <br>
+  Publication Date:
+  <input type="text" class="txt" name="pubdateBook" [(ngModel)]="publicationDate" placeholder="dd/mm/yyyy">
+  <br>
+  Number of pages:
+  <input type="text" class="txt" name="numPages" [(ngModel)]="numOfPages" placeholder="Number of pages" >
+  <br>
+  <input type="submit" value="Add This Book" id="btnSaveBook" (click)="saveNewBook()">
+  <h5>Status: {{postRequestResponse}}</h5>
+</div>
+
+<app-alerts></app-alerts>

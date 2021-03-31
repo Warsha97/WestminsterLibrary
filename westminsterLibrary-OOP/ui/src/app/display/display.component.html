@@ -1,0 +1,26 @@
+<!--this ngFor will allow to display multiple records-->
+<div class="formContainer">
+  <table>
+    <thead>
+    <tr>
+    <th>Isbn</th>
+    <th>Type</th>
+    <th>Title</th>
+      <th>Sector</th>
+    <th>Availability</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!--these properties will take each object that was sent inside an arraylist-->
+      <tr *ngFor="let item of bookDetails">
+        <td>{{item.isbn}}</td>
+        <td>{{item.currentReader.readerName}}</td>
+        <td>{{item.title}}</td>
+        <td>{{item.sector}}</td>
+        <td  [ngClass]="{'positive' :  item.currentReader.readerID === 9, 'negative' : item.currentReader.readerID !== 9}">{{item.currentReader.readerID}}</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

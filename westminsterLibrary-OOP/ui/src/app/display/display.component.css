@@ -1,0 +1,18 @@
+.positive {
+    background-color: green;
+}
+
+.negative {
+    background-color: red;
+}
+
+table{
+font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+
+  width: 100%;
+  }
+
+th,td{
+ border: 1px solid #ddd;
+  padding: 6px;
+}

@@ -1,0 +1,70 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Serve index page from public directory
+GET     /                           controllers.FrontendController.index()
+
+# An example route (Prefix all API routes with apiPrefix defined in application.conf)
+GET     /api/summary                controllers.HomeController.appSummary
+
+# Serve static assets under public directory
+GET     /*file                      controllers.FrontendController.assetOrDefault(file)
+
+# Test post request
+POST    /api/postTest               controllers.HomeController.postTest()
+
+#Test post request of addbook
+POST    /api/addNewBook       controllers.WestminsterLibraryManager.addNewBook()
+
+#Test post request of addDvd
+POST    /api/addNewDVD        controllers.WestminsterLibraryManager.addNewDVD()
+
+#post request of display Items in a table
+POST   /api/displayBooks       controllers.WestminsterLibraryManager.displayBooks()
+
+#post requet to show deleting book
+POST  /api/showDeletingBook       controllers.WestminsterLibraryManager.showDeletingBook()
+
+#post request to delete book
+POST /api/deleteBook           controllers.WestminsterLibraryManager.deleteBook()
+
+#post request to show deleting book
+POST  /api/showDeletingDVD      controllers.WestminsterLibraryManager.showDeletingDVD()
+
+#post request to delete a DVD
+POST  /api/deleteDVD          controllers.WestminsterLibraryManager.deleteDVD()
+
+
+
+#post request of registerReader
+POST    /api/registerReader     controllers.WestminsterLibraryManager.registerReader()
+
+#post request of displaying selected book
+
+POST    /api/showSelectedBook    controllers.WestminsterLibraryManager.showSelectedBook()
+
+#post request of burrow book
+POST  /api/burrowBook           controllers.WestminsterLibraryManager.burrowBook()
+
+#post request of displaying selected DVD
+
+POST  /api/showSelectedDVD      controllers.WestminsterLibraryManager.showSelectedDVD()
+
+#post request of burrow DVD
+POST /api/burrowDVD             controllers.WestminsterLibraryManager.burrowDVD()
+
+#post request of displaying returning book
+POST  /api/showReturningBook      controllers.WestminsterLibraryManager.showReturningBook()
+
+#post request of displaying returning DVD
+POST   /api/showReturningDVD       controllers.WestminsterLibraryManager.showReturningDVD()
+
+#post request of returning book and displaying fine
+POST  /api/returnBook            controllers.WestminsterLibraryManager.returnBook()
+
+#post request of returning DVD and desplaying fine
+POST   /api/ReturnDVD      controllers.WestminsterLibraryManager.ReturnDVD()
+
+#post request of generating a report
+POST  /api/generateReport         controllers.WestminsterLibraryManager.generateReport()
